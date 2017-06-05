@@ -1,3 +1,23 @@
-<p>
-  admin works!
-</p>
+<div class="row">
+<div class="title col-lg-12">
+<h1>系统管理员界面</h1>
+</div>
+</div>
+<div class ="row">
+  <div class="nav  leftlink col-lg-4 col-md-3 col-sm-2">
+    <div class="link" routerLink="class" routerLinkActive="active"><h2>班级管理</h2></div>
+    <div class="link" routerLink="teacher" routerLinkActive="active"><h2>教师管理</h2></div>
+    <div class="link" routerLink="subject" routerLinkActive="active"><h2>课程管理</h2></div>
+    <div class="link" routerLink="student" routerLinkActive="active"><h2>学生管理</h2></div>
+    <div class="link" routerLink="mark" routerLinkActive="active"><h2>成绩管理</h2></div>
+    <div class="link" routerLink="myadmin" routerLinkActive="active"><h2>管理员管理</h2></div>
+    <div class="link" routerLink="news" routerLinkActive="active"><h2>新闻管理</h2></div>
+
+  </div>
+<div class="out col-lg-8 col-md-8 col-sm-8">
+
+  <router-outlet></router-outlet>
+</div>
+</div>
+
+

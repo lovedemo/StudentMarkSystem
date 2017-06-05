@@ -1,0 +1,40 @@
+<div class="stu">
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+    <tabset type="pills">
+      <tab heading="添加学生">
+        <div class="addform">
+          <form class="form-group" #stu="ngForm" (ngSubmit)="addstu(stu)">
+           <div>
+           <label>学号</label>
+           <input class="form-control" ngModel name="id" placeholder="学号">
+          </div>
+          <div>
+            <label>姓名</label>
+            <input class="form-control" ngModel name="name" placeholder="姓名">
+          </div>
+          <div>
+            <label>性别</label>
+            <input class="form-control" ngModel name="sex" placeholder="性别">
+          </div>
+          <div>
+            <label>电话</label>
+            <input class="form-control" ngModel name="tel" placeholder="电话">
+          </div>
+          <div>
+            <label>班级</label>
+            <input class="form-control" ngModel name="class" placeholder="班级">
+          </div>
+
+        </form>
+        </div>
+
+      </tab>
+      <tab heading="搜索学生">
+        <pre class="card card-block card-header">当前选择: {{selected | json}}</pre>
+        <input [(ngModel)]="selected" [typeahead]="states" class="form-control">
+      </tab>
+    </tabset>
+  </div>
+</div>
+</div>
