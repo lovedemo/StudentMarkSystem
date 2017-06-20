@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms'
 
 @Component({
   selector: 'app-myadmin',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyadminComponent implements OnInit {
 
+  public oldpwdisright:boolean=true;
   constructor() { }
 
   ngOnInit() {

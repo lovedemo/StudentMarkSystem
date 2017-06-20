@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {NgForm} from '@angular/forms'
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
@@ -11,5 +11,8 @@ export class NewsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+addnews(f:NgForm){
+    console.log(f.value);
+    alert("发布成功");
+}
 }

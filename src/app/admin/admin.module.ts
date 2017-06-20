@@ -8,6 +8,9 @@ import {FormsModule}from '@angular/forms'
 import { TypeaheadModule } from 'ngx-bootstrap';
 //import { CollapseModule } from 'ngx-bootstrap';
 import { TabsModule } from 'ngx-bootstrap';
+import { ModalModule  as myModalModule} from 'ngx-bootstrap' ;
+import { ModalModule } from 'angular2-modal';
+import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
 //自定义路由
 import {adminRoutes} from './admin.route';
 
@@ -29,7 +32,10 @@ import { AllchangeComponent } from './admin/allchange/allchange.component'
     RouterModule.forChild(adminRoutes),
     FormsModule,
     TypeaheadModule.forRoot(),
-    TabsModule.forRoot()
+    TabsModule.forRoot(),
+    myModalModule.forRoot(),
+    ModalModule.forRoot(),
+    BootstrapModalModule
   ],
   declarations: [AdminComponent, ClassComponent, SubjectComponent, StudentComponent, MarkComponent, MyadminComponent, TeacherComponent, NewsComponent, AllchangeComponent],
   exports:[AdminComponent]

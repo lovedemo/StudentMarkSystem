@@ -1,3 +1,25 @@
-<p>
-  myadmin works!
-</p>
+<div class="changepwd">
+  <form  #changepwd="ngForm" >
+    <div class="form-group">
+      <div>
+      <label class="control-label">请输入旧密码
+      <input name="oldpwd" class="form-control" placeholder="旧密码"></label>
+      </div>
+      <div *ngIf="oldpwdisright">
+        <p>密码不正确</p>
+      </div>
+      <div>
+      <label>请输入新密码
+      <input name="newpwd1" class="form-control" placeholder="新密码"></label>
+      </div>
+      <div>
+      <label>确认新密码
+      <input name="newpwd2" class="form-control" placeholder="确认密码"></label>
+      </div>
+      <div>
+      <button disabled class="btn btn-danger">修改</button>
+      </div>
+    </div>
+
+  </form>
+</div>

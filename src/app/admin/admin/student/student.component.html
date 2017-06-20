@@ -23,9 +23,12 @@
           </div>
           <div>
             <label>班级</label>
-            <input class="form-control" ngModel name="class" placeholder="班级">
+            <input class="form-control" ngModel name="stclass" placeholder="班级">
           </div>
-
+            <div>
+            <button class="btn btn-success" type="submit">添加</button>
+              <button class="btn btn-primary" type="reset">重置</button>
+            </div>
         </form>
         </div>
 
@@ -33,8 +36,42 @@
       <tab heading="搜索学生">
         <pre class="card card-block card-header">当前选择: {{selected | json}}</pre>
         <input [(ngModel)]="selected" [typeahead]="states" class="form-control">
+        <button class="btn btn-primary" (click)="look(selected)">查看</button>
+
+        <div *ngIf="check">
+          <form #changef="ngForm" class="form-group" >
+              <div>
+                <label>学号</label>
+                <input class="form-control" [(ngModel)]="stud.id" type="text" id="aid" name="aid" placeholder="学号">
+              </div>
+              <div>
+                <label>姓名</label>
+                <input class="form-control" [(ngModel)]="stud.name" id="aname" name="aname" placeholder="姓名">
+              </div>
+              <div>
+                <label>性别</label>
+                <input class="form-control" [(ngModel)]="stud.sex" id="asex" name="asex" placeholder="性别">
+              </div>
+              <div>
+                <label>电话</label>
+                <input class="form-control" [(ngModel)]="stud.tel" id="atel" name="atel" placeholder="电话">
+              </div>
+              <div>
+                <label>班级</label>
+                <input class="form-control" [(ngModel)]="stud.stclass" id="astclass" name="astclass"  placeholder="班级">
+              </div>
+              <div>
+                <button class="btn btn-primay"  (click)= "change(stud)" type="submit">修改</button>
+                <button class="btn btn-danger" (click)="deletest(stud)">删除</button>
+
+              </div>
+            </form>
+          <p>f.value:{{changef.value |json}}</p>
+
+        </div>
       </tab>
     </tabset>
   </div>
 </div>
 </div>
+<button class="btn" (click)="addmodal()">aaaa</button>
